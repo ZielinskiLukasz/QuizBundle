@@ -1,0 +1,4 @@
+services:
+#    zielinski_lukasz_quiz.example:
+#        class: ZielinskiLukasz\QuizBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
