@@ -28,9 +28,16 @@ interface QuizInterface extends \Serializable
     public function getTitle() : string;
 
     /**
-     * Enabled or disables a quiz
+     * Enables a quiz
      *
      * @return self
      */
     public function setEnabled($boolean);
+
+    /**
+     * Disables a quiz
+     *
+     * @return self
+     */
+    public function setDisabled($boolean);    
 }

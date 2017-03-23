@@ -71,7 +71,7 @@ abstract class Quiz implements QuizInterface
     /**
      * {@inheritdoc}
      */
-    public function getTitle()
+    public function getTitle() : string 
     {
         return $this->title;
     }
@@ -87,10 +87,35 @@ abstract class Quiz implements QuizInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function setDisabled($boolean)
+    {
+        $this->enabled = (bool) !$boolean;
+
+        return $this;
+    }    
+
+    /**
      * @return string
      */
     public function __toString()
     {
         return (string) $this->getTitle();
     }
+
+    /**
+     * Sets the quiz title.
+     *
+     * @param string $quizname
+     *
+     * @return self
+     */
+    public function setTitle(string $title)
+    {
+    	$this->title = $title;
+
+    	return $this;
+    }
+
 }
